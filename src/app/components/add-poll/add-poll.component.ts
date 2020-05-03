@@ -11,7 +11,9 @@ export class AddPollComponent implements OnInit {
   poll = {
     title: '',
     description: '',
-    published: false
+    published: false,
+    optionOne: '',
+    optionTwo: ''
   };
   submitted = false;
 
@@ -23,7 +25,9 @@ export class AddPollComponent implements OnInit {
   savePoll() {
     const data = {
       title: this.poll.title,
-      description: this.poll.description
+      description: this.poll.description,
+      optionOne: this.poll.optionOne,
+      optionTwo: this.poll.optionTwo
     };
 
     this.pollService.create(data)
@@ -42,7 +46,9 @@ export class AddPollComponent implements OnInit {
     this.poll = {
       title: '',
       description: '',
-      published: false
+      published: false,
+      optionOne: '',
+      optionTwo: ''
     };
   }
 

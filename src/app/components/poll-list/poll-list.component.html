@@ -47,7 +47,15 @@
       </div>
       <div>
         <label><strong>Status:</strong></label>
-        {{ currentPoll.published ? "Published" : "Pending" }}
+        {{ currentPoll.published ? "Published" : "Pending"  }}
+      </div>
+      <div>
+        <label><strong>Option 1:</strong></label>
+        {{ currentPoll.optionOne }}
+      </div>
+      <div>
+        <label><strong>Option 2:</strong></label>
+        {{ currentPoll.optionTwo}}
       </div>
 
       <a class="badge badge-warning" href="/poll/{{ currentPoll.id }}">

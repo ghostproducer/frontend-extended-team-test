@@ -38,7 +38,9 @@ export class PollDetailsComponent implements OnInit {
     const data = {
       title: this.currentPoll.title,
       description: this.currentPoll.description,
-      published: status
+      published: status,
+      optionOne: this.currentPoll.optionOne,
+      optionTwo: this.currentPoll.optionTwo
     };
 
     this.apiService.update(this.currentPoll.id, data)
