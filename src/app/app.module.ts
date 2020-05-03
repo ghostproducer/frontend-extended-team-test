@@ -9,13 +9,17 @@ import { PollListComponent } from './components/poll-list/poll-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
+import { VotePollComponent } from './components/vote-poll/vote-poll.component';
+import { VoteListComponent } from './components/vote-list/vote-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPollComponent,
     PollDetailsComponent,
-    PollListComponent
+    PollListComponent,
+    VotePollComponent,
+    VoteListComponent
   ],
   imports: [
     BrowserModule,

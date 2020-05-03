@@ -1,0 +1,59 @@
+<div *ngIf="currentPoll" class="edit-form">
+  <h4>Poll {{ currentPoll.id }}</h4>
+  <form>
+    <div class="form-group">
+      <div>
+        <label><strong>Title:</strong></label> {{ currentPoll.title }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentPoll.description }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentPoll.published ? "Published" : "Pending"  }}
+      </div>
+      <div>
+        <label><strong>Option 1:</strong></label>
+        {{ currentPoll.optionOne }}
+      </div>
+      <div>
+        <label><strong>Total Votes Option 1:</strong></label>
+        {{ currentPoll.totalVotesOne }}
+      </div>
+      <div>
+        <label><strong>Option 2:</strong></label>
+        {{ currentPoll.optionTwo}}
+      </div>
+      <div>
+        <label><strong>Total Votes Option 2:</strong></label>
+        {{ currentPoll.totalVotesTwo }}
+      </div>
+      <div>
+        <label><strong>Public URL: </strong></label>
+        <a href="https://frontend-extended-team-test.herokuapp.com/vote/{{ currentPoll.id }}"> https://frontend-extended-team-test.herokuapp.com/vote/{{ currentPoll.id }}
+        </a>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label><strong>Status:</strong></label>
+      {{ currentPoll.published ? "Published" : "Pending" }}
+    </div>
+  </form>
+
+  <button type="submit" class="badge badge-primary mr-2" (click)="vote(1)">
+    Vote 1
+  </button>
+
+  <button type="submit" class="badge badge-success" (click)="vote(2)">
+    Vote 2
+  </button>
+
+  <p>{{ message }}</p>
+</div>
+
+<div *ngIf="!currentPoll">
+  <br />
+  <p>Cannot access this poll...</p>
+</div>

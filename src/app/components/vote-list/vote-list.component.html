@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="col-md-6">
-    <h4>Edit Polls List</h4>
+    <h4>Vote Polls List</h4>
     <ul class="list-group">
       <li
         class="list-group-item"
@@ -30,10 +30,6 @@
         {{ poll.title }}
       </li>
     </ul>
-
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPolls()">
-      Remove All
-    </button>
   </div>
   <div class="col-md-6">
     <div *ngIf="currentPoll">
@@ -54,9 +50,9 @@
         {{ currentPoll.optionOne }}
       </div>
       <div>
-      <label><strong>Total Votes Option 1:</strong></label>
-      {{ currentPoll.totalVotesOne }}
-    </div>
+        <label><strong>Total Votes Option 1:</strong></label>
+        {{ currentPoll.totalVotesOne }}
+      </div>
       <div>
         <label><strong>Option 2:</strong></label>
         {{ currentPoll.optionTwo}}
@@ -71,10 +67,13 @@
         </a>
       </div>
 
+      <button type="submit" class="badge badge-primary mr-2" (click)="vote(1)">
+        Vote 1
+      </button>
 
-      <a class="badge badge-warning mr-2" href="/poll/{{ currentPoll.id }}">
-        Edit
-      </a>
+      <button type="submit" class="badge badge-success" (click)="vote(2)">
+        Vote 2
+      </button>
 
     </div>
 
