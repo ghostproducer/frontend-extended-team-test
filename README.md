@@ -14,7 +14,7 @@ Desired features, in order of priority:
 
 - After the poll is created, the user should be able to edit the poll, and modify anything they specified originally. [x]
 
-- After the poll is created, the user should be able to share their poll with their friends. This can be as simple as generating a link that they can have other people go to to respond to the poll.
+- After the poll is created, the user should be able to share their poll with their friends. This can be as simple as generating a link that they can have other people go to to respond to the poll. [x]
 
 - The user should be able to view a graph of the responses to their poll.
 
