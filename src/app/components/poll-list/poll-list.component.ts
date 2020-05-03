@@ -79,8 +79,10 @@ export class PollListComponent implements OnInit {
 
     this.apiService.vote( this.currentPoll.id, data)
       .subscribe(
-        response => {
+        (response: any) => {
           console.log(response);
+          this.currentPoll.totalVotesOne = response.totalVotesOne;
+          this.currentPoll.totalVotesTwo = response.totalVotesTwo;
         },
         error => {
           console.log(error);

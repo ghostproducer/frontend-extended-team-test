@@ -54,9 +54,18 @@
         {{ currentPoll.optionOne }}
       </div>
       <div>
+      <label><strong>Total Votes Option 1:</strong></label>
+      {{ currentPoll.totalVotesOne }}
+    </div>
+      <div>
         <label><strong>Option 2:</strong></label>
         {{ currentPoll.optionTwo}}
       </div>
+      <div>
+        <label><strong>Total Votes Option 2:</strong></label>
+        {{ currentPoll.totalVotesTwo }}
+      </div>
+
 
       <a class="badge badge-warning mr-2" href="/poll/{{ currentPoll.id }}">
         Edit
