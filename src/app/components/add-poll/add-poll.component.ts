@@ -51,5 +51,4 @@ export class AddPollComponent implements OnInit {
       optionTwo: ''
     };
   }
-
 }
