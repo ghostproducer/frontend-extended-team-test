@@ -65,4 +65,18 @@ export class PollListComponent implements OnInit {
           console.log(error);
         });
   }
+
+  vote(option: string) {
+    const data = {
+      option,
+    };
+    this.apiService.vote( this.currentPoll.id, data.option)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 }

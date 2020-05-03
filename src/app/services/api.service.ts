@@ -38,4 +38,8 @@ export class ApiService {
   findByTitle(title) {
     return this.http.get(`${baseUrl}?title=${title}`);
   }
+
+  vote(id, option) {
+    return this.http.post(`${baseUrl}/${id}/${option}`, option);
+  }
 }
