@@ -66,11 +66,18 @@ export class PollListComponent implements OnInit {
         });
   }
 
-  vote(option: string) {
+  vote(option: number) {
     const data = {
-      option,
+      optionTwo: undefined,
+      optionOne: undefined
     };
-    this.apiService.vote( this.currentPoll.id, data.option)
+    if (option === 1) {
+      data.optionOne = 1;
+    } else if (option === 2) {
+      data.optionTwo = 2;
+    }
+
+    this.apiService.vote( this.currentPoll.id, data)
       .subscribe(
         response => {
           console.log(response);

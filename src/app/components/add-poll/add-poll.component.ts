@@ -13,7 +13,9 @@ export class AddPollComponent implements OnInit {
     description: '',
     published: false,
     optionOne: '',
-    optionTwo: ''
+    totalVotesOne: 0,
+    optionTwo: '',
+    totalVotesTwo: 0
   };
   submitted = false;
 
@@ -48,7 +50,9 @@ export class AddPollComponent implements OnInit {
       description: '',
       published: false,
       optionOne: '',
-      optionTwo: ''
+      totalVotesOne: 0,
+      optionTwo: '',
+      totalVotesTwo: 0
     };
   }
 }

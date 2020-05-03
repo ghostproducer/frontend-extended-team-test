@@ -39,7 +39,13 @@ export class ApiService {
     return this.http.get(`${baseUrl}?title=${title}`);
   }
 
-  vote(id, option) {
-    return this.http.post(`${baseUrl}/${id}/${option}`, option);
+  vote(id, data) {
+    console.log('data = ', data);
+    if (data.optionOne) {
+      return this.http.post(`${baseUrl}/${id}/${data.optionOne}`, data);
+    }
+    if (data.optionTwo) {
+      return this.http.post(`${baseUrl}/${id}/${data.optionTwo}`, data);
+    }
   }
 }
