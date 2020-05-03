@@ -2,6 +2,8 @@
 
 This is my purposed solution for the Extended Team technical test. 
 
+This is the source code for the front end only. To check the Java back end code, [click this link](https://github.com/ghostproducer/backend-extended-team-test).
+
 ### The Task
 
 Desired features, in order of priority:
