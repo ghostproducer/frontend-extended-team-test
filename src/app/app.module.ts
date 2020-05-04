@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import { VotePollComponent } from './components/vote-poll/vote-poll.component';
 import { VoteListComponent } from './components/vote-list/vote-list.component';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { VoteListComponent } from './components/vote-list/vote-list.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

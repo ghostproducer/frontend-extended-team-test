@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-poll-details',
@@ -11,6 +13,23 @@ export class PollDetailsComponent implements OnInit {
 
   currentPoll = null;
   message = '';
+
+  public barChartLabels: string[] = ['Label 1', 'Label 2'];
+  public barChartData: number[] = [0, 0];
+  public barChartType = 'bar';
+  public barChartOptions = {
+    legend: { display: false },
+    title: {
+      display: true,
+      text: 'Number of votes'
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }] }};
+
 
   constructor(
     private apiService: ApiService,
@@ -28,6 +47,9 @@ export class PollDetailsComponent implements OnInit {
         data => {
           this.currentPoll = data;
           console.log(data);
+          this.barChartLabels = [this.currentPoll.optionOne, this.currentPoll.optionTwo];
+          this.barChartData = [this.currentPoll.totalVotesOne, this.currentPoll.totalVotesTwo];
+
         },
         error => {
           console.log(error);

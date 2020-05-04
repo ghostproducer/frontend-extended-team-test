@@ -28,17 +28,17 @@
         class="form-control"
         id="option1"
         [(ngModel)]="currentPoll.optionOne"
-        name="description"
+        name="option1"
       />
     </div>
     <div class="form-group">
-      <label for="option1">Option 2</label>
+      <label for="option2">Option 2</label>
       <input
         type="text"
         class="form-control"
         id="option2"
         [(ngModel)]="currentPoll.optionTwo"
-        name="description"
+        name="option2"
       />
     </div>
 
@@ -47,6 +47,15 @@
       {{ currentPoll.published ? "Published" : "Pending" }}
     </div>
   </form>
+
+  <div class="chart-wrapper">
+    <canvas baseChart
+            [data]="barChartData"
+            [labels]="barChartLabels"
+            [chartType]="barChartType"
+            [options]="barChartOptions">
+    </canvas>
+  </div>
 
   <button
     class="badge badge-primary mr-2"
